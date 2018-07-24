@@ -17,6 +17,8 @@
 		9F3F37B62106B41A0009D979 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B52106B41A0009D979 /* Constants.swift */; };
 		9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B82106B9560009D979 /* CitiesRequest.swift */; };
 		9F3F37BB2106B98D0009D979 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37BA2106B98D0009D979 /* CitiesResponse.swift */; };
+		9F677CA821078384002DA21F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CA721078384002DA21F /* Protocols.swift */; };
+		9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CA9210783B4002DA21F /* CitiesViewModel.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
 		9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EC2106AD36007F8038 /* ViewController.swift */; };
 		9FF4C2F02106AD36007F8038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EE2106AD36007F8038 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		9F3F37B52106B41A0009D979 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3F37B82106B9560009D979 /* CitiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRequest.swift; sourceTree = "<group>"; };
 		9F3F37BA2106B98D0009D979 /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
+		9F677CA721078384002DA21F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9F677CA9210783B4002DA21F /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF4C2EC2106AD36007F8038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		9F3F37B32106B3ED0009D979 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9F677CA621078371002DA21F /* Protocol */,
 				9F3F37B42106B3FC0009D979 /* Constants */,
 			);
 			path = Utils;
@@ -168,6 +173,30 @@
 				9F3F37B82106B9560009D979 /* CitiesRequest.swift */,
 			);
 			path = CitiesRequest;
+			sourceTree = "<group>";
+		};
+		9F677CA42107833F002DA21F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F677CA52107835B002DA21F /* CitiesViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F677CA52107835B002DA21F /* CitiesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F677CA9210783B4002DA21F /* CitiesViewModel.swift */,
+			);
+			path = CitiesViewModel;
+			sourceTree = "<group>";
+		};
+		9F677CA621078371002DA21F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9F677CA721078384002DA21F /* Protocols.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		9FF4C2DE2106AD36007F8038 = {
@@ -196,6 +225,7 @@
 				9F3F37B32106B3ED0009D979 /* Utils */,
 				9F3F37AF2106B35B0009D979 /* Requests */,
 				9F3F37A32106B12D0009D979 /* Model */,
+				9F677CA42107833F002DA21F /* ViewModel */,
 				9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */,
 				9FF4C2EC2106AD36007F8038 /* ViewController.swift */,
 				9FF4C2EE2106AD36007F8038 /* Main.storyboard */,
@@ -393,6 +423,8 @@
 				9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */,
 				9F3F37B22106B3890009D979 /* BaseRequest.swift in Sources */,
 				9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */,
+				9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */,
+				9F677CA821078384002DA21F /* Protocols.swift in Sources */,
 				9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */,
 				9F3F37AB2106B25E0009D979 /* Temperature.swift in Sources */,
 				9F3F37AA2106B25E0009D979 /* DailyClimate.swift in Sources */,
