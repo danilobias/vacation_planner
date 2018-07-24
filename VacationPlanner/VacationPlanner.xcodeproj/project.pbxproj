@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E5BF05E4B1ACB8828F40DF7 /* Pods_VacationPlannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79911F3D767A78C6A2812566 /* Pods_VacationPlannerTests.framework */; };
+		9F26FF61877CB7B38178930F /* Pods_VacationPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3306461F4A18798907F704 /* Pods_VacationPlanner.framework */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
 		9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EC2106AD36007F8038 /* ViewController.swift */; };
 		9FF4C2F02106AD36007F8038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EE2106AD36007F8038 /* Main.storyboard */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A601AA7B7A2964D8D4604D9 /* Pods-VacationPlannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacationPlannerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VacationPlannerTests/Pods-VacationPlannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A3306461F4A18798907F704 /* Pods_VacationPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VacationPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70AE20CF05E396F5A2BAB7BF /* Pods-VacationPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacationPlanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-VacationPlanner/Pods-VacationPlanner.release.xcconfig"; sourceTree = "<group>"; };
+		79911F3D767A78C6A2812566 /* Pods_VacationPlannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VacationPlannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF4C2EC2106AD36007F8038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		9FF4C2FE2106AD38007F8038 /* VacationPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VacationPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C3022106AD38007F8038 /* VacationPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPlannerTests.swift; sourceTree = "<group>"; };
 		9FF4C3042106AD38007F8038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F52ACF69501327FAAF834E /* Pods-VacationPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacationPlanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VacationPlanner/Pods-VacationPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		C013D4A26D9EF59037DA4FA2 /* Pods-VacationPlannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacationPlannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VacationPlannerTests/Pods-VacationPlannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F26FF61877CB7B38178930F /* Pods_VacationPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5BF05E4B1ACB8828F40DF7 /* Pods_VacationPlannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37120B223A31A6C9A7B411E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A3306461F4A18798907F704 /* Pods_VacationPlanner.framework */,
+				79911F3D767A78C6A2812566 /* Pods_VacationPlannerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9FF4C2DE2106AD36007F8038 = {
 			isa = PBXGroup;
 			children = (
 				9FF4C2E92106AD36007F8038 /* VacationPlanner */,
 				9FF4C3012106AD38007F8038 /* VacationPlannerTests */,
 				9FF4C2E82106AD36007F8038 /* Products */,
+				B407703E6A617C9EFCBE20BB /* Pods */,
+				37120B223A31A6C9A7B411E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,17 @@
 			path = VacationPlannerTests;
 			sourceTree = "<group>";
 		};
+		B407703E6A617C9EFCBE20BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4F52ACF69501327FAAF834E /* Pods-VacationPlanner.debug.xcconfig */,
+				70AE20CF05E396F5A2BAB7BF /* Pods-VacationPlanner.release.xcconfig */,
+				C013D4A26D9EF59037DA4FA2 /* Pods-VacationPlannerTests.debug.xcconfig */,
+				4A601AA7B7A2964D8D4604D9 /* Pods-VacationPlannerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FF4C3072106AD38007F8038 /* Build configuration list for PBXNativeTarget "VacationPlanner" */;
 			buildPhases = (
+				9FB5D2E962AE3C29FD5C1AD6 /* [CP] Check Pods Manifest.lock */,
 				9FF4C2E32106AD36007F8038 /* Sources */,
 				9FF4C2E42106AD36007F8038 /* Frameworks */,
 				9FF4C2E52106AD36007F8038 /* Resources */,
@@ -123,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FF4C30A2106AD38007F8038 /* Build configuration list for PBXNativeTarget "VacationPlannerTests" */;
 			buildPhases = (
+				F3B6825F9E053CA719E14595 /* [CP] Check Pods Manifest.lock */,
 				9FF4C2FA2106AD38007F8038 /* Sources */,
 				9FF4C2FB2106AD38007F8038 /* Frameworks */,
 				9FF4C2FC2106AD38007F8038 /* Resources */,
@@ -194,6 +228,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FB5D2E962AE3C29FD5C1AD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VacationPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B6825F9E053CA719E14595 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VacationPlannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FF4C2E32106AD36007F8038 /* Sources */ = {
@@ -360,15 +433,13 @@
 		};
 		9FF4C3082106AD38007F8038 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F52ACF69501327FAAF834E /* Pods-VacationPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -378,15 +449,13 @@
 		};
 		9FF4C3092106AD38007F8038 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70AE20CF05E396F5A2BAB7BF /* Pods-VacationPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -396,17 +465,14 @@
 		};
 		9FF4C30B2106AD38007F8038 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C013D4A26D9EF59037DA4FA2 /* Pods-VacationPlannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlannerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -417,17 +483,14 @@
 		};
 		9FF4C30C2106AD38007F8038 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A601AA7B7A2964D8D4604D9 /* Pods-VacationPlannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlannerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
