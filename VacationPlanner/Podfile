@@ -6,6 +6,7 @@ target 'VacationPlanner' do
     
     # Pods for VacationPlanner
     pod 'Alamofire'
+    pod 'SwiftyJSON'
     
     target 'VacationPlannerTests' do
         inherit! :search_paths
