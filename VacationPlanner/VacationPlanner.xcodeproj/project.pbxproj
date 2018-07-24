@@ -14,6 +14,7 @@
 		9F3F37AB2106B25E0009D979 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37A92106B25E0009D979 /* Temperature.swift */; };
 		9F3F37AE2106B2F00009D979 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37AD2106B2F00009D979 /* Weather.swift */; };
 		9F3F37B22106B3890009D979 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B12106B3890009D979 /* BaseRequest.swift */; };
+		9F3F37B62106B41A0009D979 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B52106B41A0009D979 /* Constants.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
 		9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EC2106AD36007F8038 /* ViewController.swift */; };
 		9FF4C2F02106AD36007F8038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EE2106AD36007F8038 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		9F3F37A92106B25E0009D979 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		9F3F37AD2106B2F00009D979 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9F3F37B12106B3890009D979 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		9F3F37B52106B41A0009D979 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF4C2EC2106AD36007F8038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,22 @@
 			path = BaseRequest;
 			sourceTree = "<group>";
 		};
+		9F3F37B32106B3ED0009D979 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9F3F37B42106B3FC0009D979 /* Constants */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9F3F37B42106B3FC0009D979 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9F3F37B52106B41A0009D979 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		9FF4C2DE2106AD36007F8038 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +179,7 @@
 		9FF4C2E92106AD36007F8038 /* VacationPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				9F3F37B32106B3ED0009D979 /* Utils */,
 				9F3F37AF2106B35B0009D979 /* Requests */,
 				9F3F37A32106B12D0009D979 /* Model */,
 				9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */,
@@ -365,6 +384,7 @@
 				9F3F37A62106B18F0009D979 /* City.swift in Sources */,
 				9FF4C2F32106AD36007F8038 /* VacationPlanner.xcdatamodeld in Sources */,
 				9F3F37AE2106B2F00009D979 /* Weather.swift in Sources */,
+				9F3F37B62106B41A0009D979 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
