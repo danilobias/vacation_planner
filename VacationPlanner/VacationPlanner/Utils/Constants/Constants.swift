@@ -12,7 +12,7 @@ struct Constants {
     
     //MARK: URL's e métodos
     struct APIPreffix {
-        static var urlPreffix: String = "localhost:8882/"
+        static var urlPreffix: String = "http://localhost:8882"
     }
     
     struct URLPaths {
@@ -20,7 +20,7 @@ struct Constants {
     }
     
     struct CitiesMethods {
-        static let getAllCities = "/cities"
+        static let getAllCities = "/cities/"
         static let getCityDailyClimate = "/%@/year/%@"
     }
     
