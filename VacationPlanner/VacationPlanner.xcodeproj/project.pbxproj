@@ -142,6 +142,7 @@
 				9FF4C2E32106AD36007F8038 /* Sources */,
 				9FF4C2E42106AD36007F8038 /* Frameworks */,
 				9FF4C2E52106AD36007F8038 /* Resources */,
+				6A1FCD3082CBE56E25FE9FA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +231,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6A1FCD3082CBE56E25FE9FA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VacationPlanner/Pods-VacationPlanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VacationPlanner/Pods-VacationPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9FB5D2E962AE3C29FD5C1AD6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
