@@ -27,6 +27,8 @@
 		9FD37E8F2108A8DD00BCC822 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E8E2108A8DD00BCC822 /* UIView.swift */; };
 		9FD37E932108AF9200BCC822 /* ClimateOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E922108AF9200BCC822 /* ClimateOptionsViewController.swift */; };
 		9FD37E952108AF9D00BCC822 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */; };
+		9FD37E982108BAF900BCC822 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E972108BAF900BCC822 /* UITextField.swift */; };
+		9FD37E9B2108BB3F00BCC822 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */; };
 		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
 		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		9FD37E8E2108A8DD00BCC822 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		9FD37E922108AF9200BCC822 /* ClimateOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateOptionsViewController.swift; sourceTree = "<group>"; };
 		9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		9FD37E972108BAF900BCC822 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +177,7 @@
 		9F3F37B32106B3ED0009D979 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9FD37E992108BB2F00BCC822 /* DateUtils */,
 				9F677CA621078371002DA21F /* Protocol */,
 				9F3F37B42106B3FC0009D979 /* Constants */,
 			);
@@ -248,6 +253,7 @@
 		9FD37E892108A86000BCC822 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9FD37E962108BAE600BCC822 /* TextField */,
 				9FD37E8D2108A8D000BCC822 /* UIView */,
 				9FD37E8A2108A89D00BCC822 /* Button */,
 			);
@@ -284,6 +290,22 @@
 				9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */,
 			);
 			path = ResultsViewController;
+			sourceTree = "<group>";
+		};
+		9FD37E962108BAE600BCC822 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				9FD37E972108BAF900BCC822 /* UITextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		9FD37E992108BB2F00BCC822 /* DateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */,
+			);
+			path = DateUtils;
 			sourceTree = "<group>";
 		};
 		9FEDDCD92107FF250037EFF7 /* View */ = {
@@ -539,6 +561,7 @@
 			files = (
 				9FD37E8F2108A8DD00BCC822 /* UIView.swift in Sources */,
 				9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */,
+				9FD37E982108BAF900BCC822 /* UITextField.swift in Sources */,
 				9F3F37B22106B3890009D979 /* BaseRequest.swift in Sources */,
 				9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */,
 				9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */,
@@ -553,6 +576,7 @@
 				9F677CB521079BCF002DA21F /* WeatherResponse.swift in Sources */,
 				9F677CB321079B74002DA21F /* WeatherRequest.swift in Sources */,
 				9F3F37A62106B18F0009D979 /* City.swift in Sources */,
+				9FD37E9B2108BB3F00BCC822 /* DateUtils.swift in Sources */,
 				9F3F37BB2106B98D0009D979 /* CitiesResponse.swift in Sources */,
 				9F677CB021079B4F002DA21F /* WeatherViewModel.swift in Sources */,
 				9F677CAE21079B3F002DA21F /* DailyClimateViewModel.swift in Sources */,

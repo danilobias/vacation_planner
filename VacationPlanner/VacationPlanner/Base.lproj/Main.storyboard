@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-Ik-cHb">
                                 <rect key="frame" x="24" y="117" width="327" height="138"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-kg-643">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-kg-643">
                                         <rect key="frame" x="8" y="16" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,7 +36,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="bto-bI-ZuV"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-l9-Rh4">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-l9-Rh4">
                                         <rect key="frame" x="8" y="54" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -45,7 +45,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="SPw-em-deW"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantidade de dias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m54-aa-6SR">
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Quantidade de dias" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m54-aa-6SR">
                                         <rect key="frame" x="8" y="92" width="311" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,6 +54,9 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="8Pv-HZ-DLM"/>
                                         </connections>
                                     </textField>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jfS-Jh-n5s">
+                                        <rect key="frame" x="293" y="21" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.56470588235294117" green="0.60784313725490191" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -64,9 +67,11 @@
                                     <constraint firstAttribute="trailing" secondItem="Re9-l9-Rh4" secondAttribute="trailing" constant="8" id="fRi-Gt-sq4"/>
                                     <constraint firstAttribute="height" constant="138" id="fbj-rZ-baK"/>
                                     <constraint firstAttribute="trailing" secondItem="rm9-kg-643" secondAttribute="trailing" constant="8" id="gGi-tg-eJ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jfS-Jh-n5s" secondAttribute="trailing" constant="14" id="hui-gE-RO3"/>
                                     <constraint firstItem="m54-aa-6SR" firstAttribute="top" secondItem="Re9-l9-Rh4" secondAttribute="bottom" constant="8" id="itO-Is-S6S"/>
                                     <constraint firstItem="m54-aa-6SR" firstAttribute="leading" secondItem="PoW-Ik-cHb" secondAttribute="leading" constant="8" id="rhd-pJ-Lvn"/>
                                     <constraint firstAttribute="trailing" secondItem="m54-aa-6SR" secondAttribute="trailing" constant="8" id="yBO-kp-Hum"/>
+                                    <constraint firstItem="jfS-Jh-n5s" firstAttribute="centerY" secondItem="rm9-kg-643" secondAttribute="centerY" id="yak-NO-cOG"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opções:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb9-oD-bTv">
@@ -78,13 +83,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-lY-mMC">
                                 <rect key="frame" x="24" y="296" width="327" height="62"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione as opções de clima" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-Z5-WRX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Selecione as opções de clima" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-Z5-WRX">
                                         <rect key="frame" x="16" y="16" width="295" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="NYB-Jo-izQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -139,12 +144,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="kia-n7-503"/>
                     <connections>
+                        <outlet property="actLoadCity" destination="jfS-Jh-n5s" id="0rW-Ad-iKG"/>
                         <outlet property="box1View" destination="PoW-Ik-cHb" id="OWY-QN-eZt"/>
-                        <outlet property="box2View" destination="hFi-kQ-Ja5" id="NJf-pT-RJQ"/>
+                        <outlet property="box2View" destination="bEZ-lY-mMC" id="Njq-2B-Dr4"/>
                         <outlet property="cityTextField" destination="rm9-kg-643" id="dRq-JY-QCv"/>
                         <outlet property="climateLabel" destination="QUz-Z5-WRX" id="Mo0-5F-N7I"/>
                         <outlet property="dateTextField" destination="Re9-l9-Rh4" id="tVK-5d-jeH"/>
                         <outlet property="daysTextField" destination="m54-aa-6SR" id="3yd-kh-8zr"/>
+                        <outlet property="searchButton" destination="s3Q-GR-6Ql" id="upW-QY-E9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -16,20 +16,30 @@ class BaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - Utils
+    func showAlert(title: String? = nil, message: String?, completion: @escaping (Bool) -> Void) {
+        
+        let alert = UIAlertController(title: title ?? "Ops" , message: (message), preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
+            completion(true)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Memory
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
 }
