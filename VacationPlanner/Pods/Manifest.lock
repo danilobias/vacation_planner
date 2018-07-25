@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.1)
+  - IQKeyboardManager (6.0.0)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManager
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManager
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  IQKeyboardManager: fdba62488e23c48a3fa8591635aff166ed946632
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: b090fb6289c7a31e7161b2d3b11471e05fb97fae
+PODFILE CHECKSUM: f89929bd12bbcf3256445ca1a7263292b28c8c1b
 
 COCOAPODS: 1.5.3

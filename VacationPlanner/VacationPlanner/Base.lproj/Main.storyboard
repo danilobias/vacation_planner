@@ -18,20 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-kg-643">
-                                <rect key="frame" x="16" y="89" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preencha os dados abaixo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl0-CB-QLW">
+                                <rect key="frame" x="16" y="80" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-l9-Rh4">
-                                <rect key="frame" x="16" y="134" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoW-Ik-cHb">
+                                <rect key="frame" x="16" y="125" width="343" height="150"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-kg-643">
+                                        <rect key="frame" x="16" y="16" width="311" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-l9-Rh4">
+                                        <rect key="frame" x="20" y="75" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.56470588235294117" green="0.60784313725490191" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rm9-kg-643" firstAttribute="top" secondItem="PoW-Ik-cHb" secondAttribute="top" constant="16" id="ZKU-9x-wpV"/>
+                                    <constraint firstItem="rm9-kg-643" firstAttribute="leading" secondItem="PoW-Ik-cHb" secondAttribute="leading" constant="16" id="dma-GM-FSc"/>
+                                    <constraint firstAttribute="height" constant="150" id="fbj-rZ-baK"/>
+                                    <constraint firstAttribute="trailing" secondItem="rm9-kg-643" secondAttribute="trailing" constant="16" id="gGi-tg-eJ2"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3Q-GR-6Ql">
                                 <rect key="frame" x="16" y="552" width="343" height="50"/>
                                 <constraints>
@@ -42,8 +59,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.60784313729999995" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PoW-Ik-cHb" secondAttribute="trailing" constant="16" id="50G-ET-mO9"/>
+                            <constraint firstItem="PoW-Ik-cHb" firstAttribute="top" secondItem="Pl0-CB-QLW" secondAttribute="bottom" constant="24" id="JZt-YA-1kY"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pl0-CB-QLW" secondAttribute="trailing" constant="20" symbolic="YES" id="VTP-Ep-T1n"/>
                             <constraint firstItem="s3Q-GR-6Ql" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WSd-6C-FQh"/>
+                            <constraint firstItem="Pl0-CB-QLW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="iHG-pe-BI5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s3Q-GR-6Ql" secondAttribute="bottom" constant="16" id="j5A-Fa-kcj"/>
+                            <constraint firstItem="PoW-Ik-cHb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="o2c-C5-xwq"/>
+                            <constraint firstItem="Pl0-CB-QLW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ooO-8T-xIp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s3Q-GR-6Ql" secondAttribute="trailing" constant="16" id="z0a-rm-G9E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,6 +83,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L9o-e7-VoU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qzA-7M-h4K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.56470588239999997" green="0.60784313729999995" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>

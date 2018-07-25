@@ -10,12 +10,34 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: - Lets and Vars
+    var citiesViewModel: CitiesViewModel! {
+        didSet {
+            citiesViewModel.responseDidChange = { [weak self] viewModel in
+                self?.finishLoadCities()
+            }
+        }
     }
 
+    // MARK: Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.citiesViewModel = CitiesViewModel()
+        self.makeCitiesRequest()
+    }
+    
+    // MARK: - Request
+    func makeCitiesRequest() {
+        self.citiesViewModel.getElement(completion: { (error) in
+            // TO-DO: Tratar erro
+        })
+    }
+    
+    func finishLoadCities() {
+        
+    }
+    
+    // MARK: - Memory
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
