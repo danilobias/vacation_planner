@@ -23,6 +23,8 @@
 		9F677CB021079B4F002DA21F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CAF21079B4F002DA21F /* WeatherViewModel.swift */; };
 		9F677CB321079B74002DA21F /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CB221079B74002DA21F /* WeatherRequest.swift */; };
 		9F677CB521079BCF002DA21F /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CB421079BCF002DA21F /* WeatherResponse.swift */; };
+		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
+		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
 		9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EC2106AD36007F8038 /* ViewController.swift */; };
 		9FF4C2F02106AD36007F8038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EE2106AD36007F8038 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		9F677CAF21079B4F002DA21F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		9F677CB221079B74002DA21F /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		9F677CB421079BCF002DA21F /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FF4C2EC2106AD36007F8038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +239,31 @@
 			path = WeatherRequest;
 			sourceTree = "<group>";
 		};
+		9FEDDCD92107FF250037EFF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FEDDCDA2107FF2C0037EFF7 /* BaseViewController */,
+				9FEDDCDD2107FF7D0037EFF7 /* HomeViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FEDDCDA2107FF2C0037EFF7 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		9FEDDCDD2107FF7D0037EFF7 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
 		9FF4C2DE2106AD36007F8038 = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +290,7 @@
 				9F3F37B32106B3ED0009D979 /* Utils */,
 				9F3F37AF2106B35B0009D979 /* Requests */,
 				9F3F37A32106B12D0009D979 /* Model */,
+				9FEDDCD92107FF250037EFF7 /* View */,
 				9F677CA42107833F002DA21F /* ViewModel */,
 				9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */,
 				9FF4C2EC2106AD36007F8038 /* ViewController.swift */,
@@ -458,9 +488,11 @@
 			files = (
 				9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */,
 				9F3F37B22106B3890009D979 /* BaseRequest.swift in Sources */,
+				9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */,
 				9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */,
 				9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */,
 				9F677CA821078384002DA21F /* Protocols.swift in Sources */,
+				9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */,
 				9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */,
 				9F3F37AB2106B25E0009D979 /* Temperature.swift in Sources */,
 				9F3F37AA2106B25E0009D979 /* DailyClimate.swift in Sources */,
@@ -643,7 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -662,7 +694,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
