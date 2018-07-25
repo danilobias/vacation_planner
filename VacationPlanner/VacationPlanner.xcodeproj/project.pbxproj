@@ -25,6 +25,8 @@
 		9F677CB521079BCF002DA21F /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CB421079BCF002DA21F /* WeatherResponse.swift */; };
 		9FD37E8C2108A8AC00BCC822 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E8B2108A8AC00BCC822 /* UIButton.swift */; };
 		9FD37E8F2108A8DD00BCC822 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E8E2108A8DD00BCC822 /* UIView.swift */; };
+		9FD37E932108AF9200BCC822 /* ClimateOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E922108AF9200BCC822 /* ClimateOptionsViewController.swift */; };
+		9FD37E952108AF9D00BCC822 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */; };
 		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
 		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
@@ -66,6 +68,8 @@
 		9F677CB421079BCF002DA21F /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		9FD37E8B2108A8AC00BCC822 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		9FD37E8E2108A8DD00BCC822 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		9FD37E922108AF9200BCC822 /* ClimateOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateOptionsViewController.swift; sourceTree = "<group>"; };
+		9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,11 +270,29 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		9FD37E902108AF5800BCC822 /* ClimateOptionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FD37E922108AF9200BCC822 /* ClimateOptionsViewController.swift */,
+			);
+			path = ClimateOptionsViewController;
+			sourceTree = "<group>";
+		};
+		9FD37E912108AF6000BCC822 /* ResultsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FD37E942108AF9D00BCC822 /* ResultsViewController.swift */,
+			);
+			path = ResultsViewController;
+			sourceTree = "<group>";
+		};
 		9FEDDCD92107FF250037EFF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				9FEDDCDA2107FF2C0037EFF7 /* BaseViewController */,
 				9FEDDCDD2107FF7D0037EFF7 /* HomeViewController */,
+				9FD37E902108AF5800BCC822 /* ClimateOptionsViewController */,
+				9FD37E912108AF6000BCC822 /* ResultsViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -526,6 +548,8 @@
 				9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */,
 				9F3F37AB2106B25E0009D979 /* Temperature.swift in Sources */,
 				9F3F37AA2106B25E0009D979 /* DailyClimate.swift in Sources */,
+				9FD37E952108AF9D00BCC822 /* ResultsViewController.swift in Sources */,
+				9FD37E932108AF9200BCC822 /* ClimateOptionsViewController.swift in Sources */,
 				9F677CB521079BCF002DA21F /* WeatherResponse.swift in Sources */,
 				9F677CB321079B74002DA21F /* WeatherRequest.swift in Sources */,
 				9F3F37A62106B18F0009D979 /* City.swift in Sources */,
