@@ -28,6 +28,13 @@ class BaseViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+        
+    }
     
     // MARK: - Memory
     override func didReceiveMemoryWarning() {

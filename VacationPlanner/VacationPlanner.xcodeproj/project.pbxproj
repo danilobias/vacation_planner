@@ -31,6 +31,7 @@
 		9FD37E9B2108BB3F00BCC822 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */; };
 		9FD37E9E2108BFD600BCC822 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9D2108BFD600BCC822 /* WeatherTableViewCell.swift */; };
 		9FD37EA02108CFD900BCC822 /* DailyClimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9F2108CFD900BCC822 /* DailyClimateResponse.swift */; };
+		9FD37EA32108D19B00BCC822 /* DailyClimateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37EA22108D19B00BCC822 /* DailyClimateRequest.swift */; };
 		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
 		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 		9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		9FD37E9D2108BFD600BCC822 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		9FD37E9F2108CFD900BCC822 /* DailyClimateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClimateResponse.swift; sourceTree = "<group>"; };
+		9FD37EA22108D19B00BCC822 /* DailyClimateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClimateRequest.swift; sourceTree = "<group>"; };
 		9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				9F3F37B02106B37B0009D979 /* BaseRequest */,
 				9F677CB121079B61002DA21F /* WeatherRequest */,
 				9F3F37B72106B9460009D979 /* CitiesRequest */,
+				9FD37EA12108D17E00BCC822 /* DailyClimateRequest */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -320,6 +323,14 @@
 				9FD37E9D2108BFD600BCC822 /* WeatherTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9FD37EA12108D17E00BCC822 /* DailyClimateRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9FD37EA22108D19B00BCC822 /* DailyClimateRequest.swift */,
+			);
+			path = DailyClimateRequest;
 			sourceTree = "<group>";
 		};
 		9FEDDCD92107FF250037EFF7 /* View */ = {
@@ -596,6 +607,7 @@
 				9F3F37BB2106B98D0009D979 /* CitiesResponse.swift in Sources */,
 				9F677CB021079B4F002DA21F /* WeatherViewModel.swift in Sources */,
 				9F677CAE21079B3F002DA21F /* DailyClimateViewModel.swift in Sources */,
+				9FD37EA32108D19B00BCC822 /* DailyClimateRequest.swift in Sources */,
 				9FF4C2F32106AD36007F8038 /* VacationPlanner.xcdatamodeld in Sources */,
 				9F3F37AE2106B2F00009D979 /* Weather.swift in Sources */,
 				9F3F37B62106B41A0009D979 /* Constants.swift in Sources */,

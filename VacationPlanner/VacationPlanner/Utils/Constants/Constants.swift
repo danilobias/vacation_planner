@@ -20,12 +20,12 @@ struct Constants {
     }
     
     struct CitiesMethods {
-        static let getAllCities = "/cities/"
+        static let getAllCities = "/cities"
         
     }
     
     struct WeatherMethods {
-        static let getAllWeatherTypes = "/weather/"
+        static let getAllWeatherTypes = "/weather"
     }
     
     struct DailyClimateMethods {
@@ -33,8 +33,8 @@ struct Constants {
     }
     
     struct APIUrls {
-        static let getAllCitiesUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities
+        static let getAllCitiesUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities + URLPaths.barPath
         static let getDailyClimatesUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities + DailyClimateMethods.getCityDailyClimate
-        static let getAllWeatherTypesUrl = Constants.APIPreffix.urlPreffix + WeatherMethods.getAllWeatherTypes
+        static let getAllWeatherTypesUrl = Constants.APIPreffix.urlPreffix + WeatherMethods.getAllWeatherTypes + URLPaths.barPath
     }
 }

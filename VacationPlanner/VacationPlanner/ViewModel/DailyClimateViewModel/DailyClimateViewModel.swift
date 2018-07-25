@@ -16,17 +16,21 @@ protocol DailyClimateViewModelProtocol: ListProtocol {
 class DailyClimateViewModel: DailyClimateViewModelProtocol {
     
     // MARK: - Vars
-    var response: DailyClimateResponse? {
-        didSet{
-            self.responseDidChange?(self)
-        }
-    }
+    var response: DailyClimateResponse?
+//    {
+//        didSet{
+//            self.responseDidChange?(self)
+//        }
+//    }
     
     var responseDidChange: ((DailyClimateViewModelProtocol) -> Void)?
     
     var cityID: String = ""
-    var year: String = ""
-    var selectedWeathers: [Weather]!
+    var fullDate: String = ""
+    var days: String = ""
+    var selectedWeathers: [Weather]!    
+    
+    var climates: [DailyClimate]!
     
     // MARK: - Methods
     required init() {}
@@ -36,23 +40,45 @@ class DailyClimateViewModel: DailyClimateViewModelProtocol {
         return response?.climates?.count ?? 0
     }
     
-    func getWeatherBy(index: Int) -> DailyClimate {
+    func getDailyClimateBy(index: Int) -> DailyClimate {
         return response!.climates![index]
+    }
+    
+    func filterByClimate () {
+        self.climates = []
+        
+        if let results: [DailyClimate] = self.response?.climates {
+            if let dateToCompare: Date = DateUtils.getDateFromString(strDate: fullDate) {
+                let daysInt: Int = Int(days)!
+                for weather in selectedWeathers {
+                    let filteredResults: [DailyClimate] = results.filter({$0.weather! == weather.name!})
+                    let filteredByDate:  [DailyClimate] = filteredResults.filter({$0.date! >= dateToCompare && ($0.date?.days(from: dateToCompare))! >= daysInt})
+                    self.climates.append(contentsOf: filteredByDate)
+                }
+            }
+        }
+        
+        print("CLIMATES \(self.response?.climates?.count)")
+        print("CLIMATES \(climates.count)")
+        self.responseDidChange?(self)
     }
     
     // MARK: - Request
     func getElement(completion: @escaping (Error?) -> Void) {
-        let url: String = String(format: Constants.APIUrls.getDailyClimatesUrl, cityID, year)
+        let formattedYear: String = DateUtils.getYearFrom(strDate: fullDate)
+        let url: String = String(format: Constants.APIUrls.getDailyClimatesUrl, cityID, formattedYear)
         print("URL \(url)")
         
-//        WeatherRequest.getAllWeathers(withURL: url) { (weatherResponse, error) in
-//            if let allWeathers = weatherResponse {
-//                self.response = allWeathers
-//            }
-//
-//            if let errorDetail = error {
-//                completion(errorDetail)
-//            }
-//        }
+        DailyClimateRequest.getDailyClimate(withURL: url) { (climatesResponse, error) in
+            
+            if let climates = climatesResponse {
+                self.response = climates
+                self.filterByClimate()
+            }
+            
+            if let errorDetail = error {
+                completion(errorDetail)
+            }
+        }
     }
 }

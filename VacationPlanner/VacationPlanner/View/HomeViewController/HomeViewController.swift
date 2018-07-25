@@ -38,18 +38,25 @@ class HomeViewController: BaseViewController {
         }
     }
     
+    var dailyClimatesViewModel: DailyClimateViewModel! {
+        didSet {
+            dailyClimatesViewModel.responseDidChange = { [weak self] viewModel in
+                self?.finishSearch()
+            }
+        }
+    }
+    
     var pickerView: UIPickerView?
     var selectedCity: City?
     var selectedWeathers: [Weather]!
     
     let climateEmptyText: String = "Selecione as opções de clima"
 
-    
-    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.citiesViewModel = CitiesViewModel()
+        self.dailyClimatesViewModel = DailyClimateViewModel()
         self.makeCitiesRequest()
         self.configViewsLayout()
     }
@@ -84,7 +91,22 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Search
     func makeSearch() {
+        self.showLoading()
+        self.dailyClimatesViewModel.cityID = self.selectedCity!.woeid!
+        self.dailyClimatesViewModel.fullDate = self.self.dateTextField.text!
+        self.dailyClimatesViewModel.days = self.daysTextField.text!
+        self.dailyClimatesViewModel.selectedWeathers = self.selectedWeathers
         
+        self.dailyClimatesViewModel.getElement { (error) in
+            //TO-DO: Tratar erro
+            self.hideLoading()
+        }
+        
+    }
+    
+    func finishSearch() {
+        self.hideLoading()
+//        self.performSegue(withIdentifier: "ShowResultsSegue", sender: nil)
     }
     
     // MARK: - Request
@@ -106,6 +128,12 @@ class HomeViewController: BaseViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        if segue.identifier == "ShowResultsSegue" {
+            if let destination = segue.destination as? ResultsViewController {
+                destination.climates = self.dailyClimatesViewModel.climates
+            }
+        }
+        
         if segue.identifier == "ShowWeatherOptionsPush" {
             if let destination = segue.destination as? ClimateOptionsViewController {
                 destination.delegate = self
@@ -180,6 +208,7 @@ extension HomeViewController: UIPickerViewDelegate {
         if tagPickerView == 1 {
             if (citiesViewModel?.numberOfRows())! > 0 {
                 cityTextField.text = citiesViewModel.getCityBy(index: row).district ?? ""
+                self.selectedCity = citiesViewModel.getCityBy(index: row)
             }
             else {
                 self.showAlert(message: "Desculpe, não foi possível carregar a lista de cidades.") { (success) in }

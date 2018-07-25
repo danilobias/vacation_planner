@@ -19,10 +19,11 @@ public class DailyClimate {
     }
     
     // MARK: Properties
-    public var date: String?
+    public var dateString: String?
     public var temperature: Temperature?
     public var weather: String?
     public var woeid: String?
+    public var date: Date?
     
     // MARK: SwiftyJSON Initializers
     /// Initiates the instance based on the object.
@@ -37,10 +38,11 @@ public class DailyClimate {
     ///
     /// - parameter json: JSON object from SwiftyJSON.
     public required init(json: JSON) {
-        date = json[SerializationKeys.date].string
+        dateString = json[SerializationKeys.date].string
         temperature = Temperature(json: json[SerializationKeys.temperature])
         weather = json[SerializationKeys.weather].string
         woeid = json[SerializationKeys.woeid].string
+        date = DateUtils.getDateFromString(strDate: dateString!, format: "yyyy-MM-dd")
     }
     
     /// Generates description of the object in the form of a NSDictionary.
@@ -48,7 +50,7 @@ public class DailyClimate {
     /// - returns: A Key value pair containing all valid values in the object.
     public func dictionaryRepresentation() -> [String: Any] {
         var dictionary: [String: Any] = [:]
-        if let value = date { dictionary[SerializationKeys.date] = value }
+        if let value = dateString { dictionary[SerializationKeys.date] = value }
         if let value = temperature { dictionary[SerializationKeys.temperature] = value.dictionaryRepresentation() }
         if let value = weather { dictionary[SerializationKeys.weather] = value }
         if let value = woeid { dictionary[SerializationKeys.woeid] = value }

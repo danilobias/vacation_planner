@@ -9,7 +9,14 @@
 import UIKit
 
 class ResultsViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Lets and Vars
+    var climates: [DailyClimate]!
 
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
