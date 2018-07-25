@@ -48,7 +48,7 @@ Execute o stubby4j através do comando:
 - [IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)
 - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)
 
-### Contato
+### TODO
 
  - Testes automatizados;
  - Melhor tratamento de erros;
