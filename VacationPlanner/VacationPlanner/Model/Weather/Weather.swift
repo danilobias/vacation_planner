@@ -20,6 +20,8 @@ public class Weather {
     public var id: String?
     public var name: String?
     
+    public var selected: Bool = false
+    
     // MARK: SwiftyJSON Initializers
     /// Initiates the instance based on the object.
     ///

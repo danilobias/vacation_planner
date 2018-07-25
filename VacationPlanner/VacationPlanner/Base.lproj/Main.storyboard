@@ -92,7 +92,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="xz2-7o-Xz4" kind="presentation" id="rV8-w8-I2M"/>
+                                            <segue destination="xz2-7o-Xz4" kind="show" id="rV8-w8-I2M"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -166,14 +166,70 @@
             </objects>
             <point key="canvasLocation" x="2802" y="463"/>
         </scene>
-        <!--View Controller-->
+        <!--Climate Options View Controller-->
         <scene sceneID="k62-TR-fwE">
             <objects>
-                <viewController id="xz2-7o-Xz4" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="xz2-7o-Xz4" customClass="ClimateOptionsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjD-ii-Hrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione os climas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-07-kem">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fzi-za-J3l">
+                                <rect key="frame" x="0.0" y="109" width="375" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KpE-4J-hrQ">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KpE-4J-hrQ" id="SbC-VW-lOX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igr-6s-GRP">
+                                                    <rect key="frame" x="16" y="8" width="343" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="igr-6s-GRP" firstAttribute="top" secondItem="SbC-VW-lOX" secondAttribute="top" constant="8" id="BbP-mD-Fhi"/>
+                                                <constraint firstAttribute="bottom" secondItem="igr-6s-GRP" secondAttribute="bottom" constant="8" id="G0Y-MB-yhJ"/>
+                                                <constraint firstItem="igr-6s-GRP" firstAttribute="leading" secondItem="SbC-VW-lOX" secondAttribute="leading" constant="16" id="f8r-eX-VYb"/>
+                                                <constraint firstAttribute="trailing" secondItem="igr-6s-GRP" secondAttribute="trailing" constant="16" id="m8n-7p-CBK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP4-gg-wn9">
+                                <rect key="frame" x="16" y="601" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.52549019610000003" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eeD-NJ-xE1"/>
+                                </constraints>
+                                <state key="normal" title="Selecionar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588239999997" green="0.60784313729999995" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZP4-gg-wn9" firstAttribute="top" secondItem="Fzi-za-J3l" secondAttribute="bottom" constant="16" id="7Xc-4r-O88"/>
+                            <constraint firstItem="Fzi-za-J3l" firstAttribute="leading" secondItem="7zt-Yr-qeg" secondAttribute="leading" id="AZg-9k-x5l"/>
+                            <constraint firstItem="LI1-07-kem" firstAttribute="top" secondItem="7zt-Yr-qeg" secondAttribute="top" constant="16" id="Cj5-Ec-4Vh"/>
+                            <constraint firstItem="7zt-Yr-qeg" firstAttribute="trailing" secondItem="LI1-07-kem" secondAttribute="trailing" constant="16" id="Env-gb-Jbk"/>
+                            <constraint firstItem="7zt-Yr-qeg" firstAttribute="trailing" secondItem="ZP4-gg-wn9" secondAttribute="trailing" constant="16" id="F9t-KF-Gtd"/>
+                            <constraint firstItem="LI1-07-kem" firstAttribute="leading" secondItem="7zt-Yr-qeg" secondAttribute="leading" constant="16" id="YFw-3Q-jJd"/>
+                            <constraint firstItem="7zt-Yr-qeg" firstAttribute="trailing" secondItem="Fzi-za-J3l" secondAttribute="trailing" id="jV9-77-kXn"/>
+                            <constraint firstItem="Fzi-za-J3l" firstAttribute="top" secondItem="LI1-07-kem" secondAttribute="bottom" constant="8" id="lHZ-AS-dJ5"/>
+                            <constraint firstItem="ZP4-gg-wn9" firstAttribute="leading" secondItem="7zt-Yr-qeg" secondAttribute="leading" constant="16" id="mEi-ue-5od"/>
+                            <constraint firstItem="7zt-Yr-qeg" firstAttribute="bottom" secondItem="ZP4-gg-wn9" secondAttribute="bottom" constant="16" id="mHc-gL-gb0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7zt-Yr-qeg"/>
                     </view>
                 </viewController>
