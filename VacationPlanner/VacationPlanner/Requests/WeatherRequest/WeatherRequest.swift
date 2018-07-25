@@ -14,7 +14,7 @@ class WeatherRequest: NSObject {
     static func getAllWeathers(withURL url: String, completion: @escaping(WeatherResponse?, Error?) -> Void) {
         BaseRequest.get(url) { (result) in
             if let data = result as? Data {
-                print("ALL WEATHERS \(JSON(data))")
+                
                 let json: JSON = JSON(data)
                 let wheatersResponse: WeatherResponse = WeatherResponse(json: json)
                 completion(wheatersResponse, nil)

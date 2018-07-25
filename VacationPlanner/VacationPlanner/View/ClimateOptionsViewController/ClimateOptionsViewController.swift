@@ -18,6 +18,7 @@ class ClimateOptionsViewController: BaseViewController {
     var weatherViewModel: WeatherViewModel! {
         didSet {
             weatherViewModel.responseDidChange = { [weak self] viewModel in
+                self?.hideLoading()
                 self?.tableView.reloadData()
             }
         }
@@ -55,8 +56,10 @@ class ClimateOptionsViewController: BaseViewController {
 
     // MARK: - Request
     func makeWeathersRequest() {
+        self.showLoading()
         self.weatherViewModel.getElement(completion: { (error) in
             // TO-DO: Tratar erro
+            self.hideLoading()
         })
     }
     

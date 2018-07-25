@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class BaseViewController: UIViewController {
 
@@ -29,11 +30,13 @@ class BaseViewController: UIViewController {
     }
     
     func showLoading() {
-        
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.show()
+
     }
     
     func hideLoading() {
-        
+        SVProgressHUD.dismiss()
     }
     
     // MARK: - Memory

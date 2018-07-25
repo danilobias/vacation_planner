@@ -14,7 +14,7 @@ class DailyClimateRequest: NSObject {
     static func getDailyClimate(withURL url: String, completion: @escaping(DailyClimateResponse?, Error?) -> Void) {
         BaseRequest.get(url) { (result) in
             if let data = result as? Data {
-                print("ALL DAILY CLIMATES \(JSON(data))")
+                
                 let json: JSON = JSON(data)
                 let dailyClimateResponse: DailyClimateResponse = DailyClimateResponse(json: json)
                 completion(dailyClimateResponse, nil)

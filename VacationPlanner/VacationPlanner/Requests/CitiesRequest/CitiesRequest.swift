@@ -14,7 +14,7 @@ class CitiesRequest: NSObject {
     static func getAllCities(withURL url: String, completion: @escaping(CitiesResponse?, Error?) -> Void) {
         BaseRequest.get(url) { (result) in
             if let data = result as? Data {
-                print("ALL CITIES \(JSON(data))")
+                
                 let json: JSON = JSON(data)
                 let citiesResponse: CitiesResponse = CitiesResponse(json: json)
                 completion(citiesResponse, nil)

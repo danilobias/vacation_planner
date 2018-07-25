@@ -26,7 +26,7 @@ class BaseRequest: NSObject {
     
     static func get(_ url: String, _ parameters: Dictionary<String, Any>? = nil,  completion: @escaping(Any?) -> Void) {
         request(url.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? url, method: .get, parameters: parameters, encoding: JSONEncoding.default).validate(statusCode: 200..<300).responseJSON { (response) in
-            print("GET: \(response.request?.url?.absoluteString ?? "")")
+//            print("GET: \(response.request?.url?.absoluteString ?? "")")
             
             //            print(response.request)  // original URL request
             //            print(response.response) // HTTP URL response
@@ -49,7 +49,7 @@ class BaseRequest: NSObject {
     
     static func post(_ url: String, parameters: Dictionary<String, Any>? = nil, completion: @escaping(Any?) -> Void) {
         request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().response { (response) in
-            print("POST: \(response.request?.url?.absoluteString ?? "")")
+//            print("POST: \(response.request?.url?.absoluteString ?? "")")
             
             if let data = response.data {
                 completion(data)
