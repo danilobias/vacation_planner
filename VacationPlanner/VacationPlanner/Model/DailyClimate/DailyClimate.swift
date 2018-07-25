@@ -38,11 +38,11 @@ public class DailyClimate {
     ///
     /// - parameter json: JSON object from SwiftyJSON.
     public required init(json: JSON) {
-        dateString = json[SerializationKeys.date].string
+        dateString = DateUtils.formatDateSimple(dateStr: json[SerializationKeys.date].string!)
         temperature = Temperature(json: json[SerializationKeys.temperature])
         weather = json[SerializationKeys.weather].string
         woeid = json[SerializationKeys.woeid].string
-        date = DateUtils.getDateFromString(strDate: dateString!, format: "yyyy-MM-dd")
+        date = DateUtils.getDateFromString(strDate: dateString!)
     }
     
     /// Generates description of the object in the form of a NSDictionary.

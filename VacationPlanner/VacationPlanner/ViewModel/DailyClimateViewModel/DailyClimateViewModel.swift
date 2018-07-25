@@ -30,7 +30,8 @@ class DailyClimateViewModel: DailyClimateViewModelProtocol {
     var days: String = ""
     var selectedWeathers: [Weather]!    
     
-    var climates: [DailyClimate]!
+//    var climates: [DailyClimate]!
+    var climatesGrouped: [String: [DailyClimate]]!
     
     // MARK: - Methods
     required init() {}
@@ -45,29 +46,29 @@ class DailyClimateViewModel: DailyClimateViewModelProtocol {
     }
     
     func filterByClimate () {
-        self.climates = []
+//        self.climates = []
+        self.climatesGrouped = [:]
         
         if let results: [DailyClimate] = self.response?.climates {
             if let dateToCompare: Date = DateUtils.getDateFromString(strDate: fullDate) {
                 let daysInt: Int = Int(days)!
                 for weather in selectedWeathers {
                     let filteredResults: [DailyClimate] = results.filter({$0.weather! == weather.name!})
-                    let filteredByDate:  [DailyClimate] = filteredResults.filter({$0.date! >= dateToCompare && ($0.date?.days(from: dateToCompare))! >= daysInt})
-                    self.climates.append(contentsOf: filteredByDate)
+                    let filteredByDate:  [DailyClimate] = filteredResults.filter({$0.date! >= dateToCompare && ($0.date?.days(from: dateToCompare))! > daysInt})
+//                    self.climates.append(contentsOf: filteredByDate)
+                    self.climatesGrouped[weather.name!] = filteredByDate
                 }
             }
         }
         
-        print("CLIMATES \(self.response?.climates?.count)")
-        print("CLIMATES \(climates.count)")
         self.responseDidChange?(self)
     }
     
     // MARK: - Request
     func getElement(completion: @escaping (Error?) -> Void) {
+       
         let formattedYear: String = DateUtils.getYearFrom(strDate: fullDate)
         let url: String = String(format: Constants.APIUrls.getDailyClimatesUrl, cityID, formattedYear)
-        print("URL \(url)")
         
         DailyClimateRequest.getDailyClimate(withURL: url) { (climatesResponse, error) in
             

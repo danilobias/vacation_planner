@@ -106,7 +106,7 @@ class HomeViewController: BaseViewController {
     
     func finishSearch() {
         self.hideLoading()
-//        self.performSegue(withIdentifier: "ShowResultsSegue", sender: nil)
+        self.performSegue(withIdentifier: "ShowResultsSegue", sender: nil)
     }
     
     // MARK: - Request
@@ -130,7 +130,7 @@ class HomeViewController: BaseViewController {
 
         if segue.identifier == "ShowResultsSegue" {
             if let destination = segue.destination as? ResultsViewController {
-                destination.climates = self.dailyClimatesViewModel.climates
+                destination.climatesGrouped = self.dailyClimatesViewModel.climatesGrouped
             }
         }
         
