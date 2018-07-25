@@ -55,4 +55,4 @@ Execute o stubby4j através do comando:
 
 ### Contato
 - [LinkedIn](https://www.linkedin.com/in/danilobias/)
-- E-mail: (<danilobias@hotmail.com>)
+- E-mail: <danilobias@hotmail.com>
