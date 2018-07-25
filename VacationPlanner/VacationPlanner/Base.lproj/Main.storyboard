@@ -83,7 +83,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-lY-mMC">
                                 <rect key="frame" x="24" y="296" width="327" height="62"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Selecione as opções de clima" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-Z5-WRX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione as opções de clima" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-Z5-WRX">
                                         <rect key="frame" x="16" y="16" width="295" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="xz2-7o-Xz4" kind="show" id="rV8-w8-I2M"/>
+                                            <segue destination="xz2-7o-Xz4" kind="show" identifier="ShowWeatherOptionsPush" id="rV8-w8-I2M"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,7 +117,7 @@
                                 </constraints>
                                 <state key="normal" title="Buscar"/>
                                 <connections>
-                                    <segue destination="mdF-EP-2bP" kind="show" id="sPn-SU-2MC"/>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pxb-lE-W1b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,6 +152,7 @@
                         <outlet property="dateTextField" destination="Re9-l9-Rh4" id="tVK-5d-jeH"/>
                         <outlet property="daysTextField" destination="m54-aa-6SR" id="3yd-kh-8zr"/>
                         <outlet property="searchButton" destination="s3Q-GR-6Ql" id="upW-QY-E9B"/>
+                        <segue destination="mdF-EP-2bP" kind="show" identifier="ShowResultsSegue" id="NC7-lH-9qw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -218,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="2802" y="463"/>
         </scene>
-        <!--Climate Options View Controller-->
+        <!--Clima-->
         <scene sceneID="k62-TR-fwE">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="xz2-7o-Xz4" customClass="ClimateOptionsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Clima" hidesBottomBarWhenPushed="YES" id="xz2-7o-Xz4" customClass="ClimateOptionsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjD-ii-Hrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +237,7 @@
                                 <rect key="frame" x="0.0" y="109" width="375" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" id="KpE-4J-hrQ" customClass="WeatherTableViewCell" customModule="VacationPlanner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" id="KpE-4J-hrQ" customClass="WeatherTableViewCell" customModule="VacationPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KpE-4J-hrQ" id="SbC-VW-lOX">
@@ -257,6 +258,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="igr-6s-GRP" secondAttribute="trailing" constant="16" id="m8n-7p-CBK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="igr-6s-GRP" id="upi-pa-k1D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -271,6 +275,9 @@
                                     <constraint firstAttribute="height" constant="50" id="eeD-NJ-xE1"/>
                                 </constraints>
                                 <state key="normal" title="Selecionar"/>
+                                <connections>
+                                    <action selector="selectWeathers:" destination="xz2-7o-Xz4" eventType="touchUpInside" id="5m9-g2-EDv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.56470588239999997" green="0.60784313729999995" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>

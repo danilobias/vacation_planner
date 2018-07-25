@@ -20,13 +20,28 @@ class WeatherTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
-    }
+        super.setSelected(selected, animated: animated)
+        self.accessoryType = selected ? .checkmark : .none
 
+    }
+    
     // MARK: - Layout Config Methods
-    func configCellWith(weather: Weather) {
+    func configCellWith(weather: Weather, indexPath: IndexPath, tableView: UITableView) {
         self.nameLabel.text = weather.name ?? ""
+        
+        // select/deselect the cell
+        if weather.isSelected {
+            
+            if !self.isSelected {
+                tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            }
+            
+        } else {
+            
+            if self.isSelected {
+                tableView.deselectRow(at: indexPath, animated: false)
+            }
+        }
     }
 }

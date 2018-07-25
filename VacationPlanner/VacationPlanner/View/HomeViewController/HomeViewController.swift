@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol WeatherFilterProtocol: class {
+    func selectedWeatherToFilter(weathers: [Weather])
+}
+
+
 class HomeViewController: BaseViewController {
     
     // MARK: - IBOutlets
@@ -34,7 +39,13 @@ class HomeViewController: BaseViewController {
     }
     
     var pickerView: UIPickerView?
+    var selectedCity: City?
+    var selectedWeathers: [Weather]!
+    
+    let climateEmptyText: String = "Selecione as opções de clima"
 
+    
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +54,37 @@ class HomeViewController: BaseViewController {
         self.configViewsLayout()
     }
     
+    // MARK: - Actions
+    @IBAction func search(_ sender: UIButton) {
+        
+        if self.cityTextField.text?.isEmpty == false &&
+            self.dateTextField.text?.isEmpty == false &&
+            self.daysTextField.text?.isEmpty == false &&
+            self.climateLabel.text != self.climateEmptyText &&
+            self.selectedWeathers.count > 0 {
+            
+            self.makeSearch()
+        
+        }else {
+            if self.selectedWeathers?.count == 0 {
+                self.showAlert(message: "Selecione as opções de clima, por favor.") { (success) in }
+            }else {
+                self.showAlert(message: "Verifique os campos e tente novamente, por favor.") { (success) in }
+            }
+        }
+    }
+    
     // MARK: - Configurations
     func configViewsLayout() {
         self.box1View.cornerRadius(radius: 5.0)
         self.box2View.cornerRadius(radius: 5.0)
         self.climateLabel.cornerRadius(radius: 5.0)
         self.searchButton.circleView()        
+    }
+    
+    // MARK: - Search
+    func makeSearch() {
+        
     }
     
     // MARK: - Request
@@ -69,14 +105,36 @@ class HomeViewController: BaseViewController {
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "ShowWeatherOptionsPush" {
+            if let destination = segue.destination as? ClimateOptionsViewController {
+                destination.delegate = self
+            }
+        }
     }
 
     // MARK: - Memory
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreate
+    }
+}
+
+// MARK: - Weather Filter Delegate
+extension HomeViewController: WeatherFilterProtocol {
+    
+    func selectedWeatherToFilter(weathers: [Weather]) {
+        
+        self.selectedWeathers = weathers
+        
+        for weather in self.selectedWeathers {
+            
+            if self.climateLabel.text == climateEmptyText {
+                self.climateLabel.text = weather.name ?? ""
+            }else {
+                self.climateLabel.text = self.climateLabel.text! + ", " + (weather.name ?? "")
+            }
+        }
     }
 }
 

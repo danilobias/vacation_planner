@@ -25,7 +25,7 @@ struct Constants {
     }
     
     struct WeatherMethods {
-        static let getAllWeatherTypes = "/weather"
+        static let getAllWeatherTypes = "/weather/"
     }
     
     struct APIUrls {

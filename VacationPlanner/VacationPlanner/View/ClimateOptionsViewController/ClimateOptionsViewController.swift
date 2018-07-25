@@ -23,12 +23,29 @@ class ClimateOptionsViewController: BaseViewController {
         }
     }
     
+    var delegate: WeatherFilterProtocol?
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.weatherViewModel = WeatherViewModel()
         self.makeWeathersRequest()
         self.configViewsLayout()
+    }
+    
+    // MARK: - Actions
+    @IBAction func selectWeathers(_ sender: UIButton) {
+        
+        let selectedWeathers: [Weather] = self.getSelectedWeathers()
+        
+        if selectedWeathers.count > 0 {
+        
+            self.delegate?.selectedWeatherToFilter(weathers: selectedWeathers)
+            self.navigationController?.popViewController(animated: true)
+        
+        }else {
+            self.showAlert(message: "Selecione ao menos 1 opção.") { (success) in }
+        }
     }
     
     // MARK: - Configurations
@@ -41,6 +58,15 @@ class ClimateOptionsViewController: BaseViewController {
         self.weatherViewModel.getElement(completion: { (error) in
             // TO-DO: Tratar erro
         })
+    }
+    
+    // MARK: - Utils
+    func getSelectedWeathers() -> [Weather] {
+        if let weathers: [Weather]  = self.weatherViewModel.response?.wheaters {
+            return weathers.filter({$0.isSelected == true})
+        }
+        
+        return []
     }
     
     // MARK: - Navigation
@@ -69,8 +95,20 @@ extension ClimateOptionsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: WeatherTableViewCell = tableView.dequeueReusableCell(withIdentifier: "WeatherTableViewCell") as! WeatherTableViewCell
         let weather: Weather = self.weatherViewModel.getWeatherBy(index: indexPath.row)
-        cell.configCellWith(weather: weather)
+        cell.configCellWith(weather: weather, indexPath: indexPath, tableView: tableView)        
         return cell
     }
+}
+
+extension ClimateOptionsViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let weather: Weather = self.weatherViewModel.getWeatherBy(index: indexPath.row)
+        weather.isSelected = true
+    }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let weather: Weather = self.weatherViewModel.getWeatherBy(index: indexPath.row)
+        weather.isSelected = false
+    }
 }

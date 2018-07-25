@@ -28,7 +28,7 @@ class WeatherViewModel: WeatherViewModelProtocol {
     required init() {}
     
     // MARK: - Utils
-    func numberOfRows() -> Int{
+    func numberOfRows() -> Int {
         return response?.wheaters?.count ?? 0
     }
     
