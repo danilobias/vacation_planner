@@ -151,14 +151,59 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="z5j-9h-BUV">
             <objects>
-                <viewController id="mdF-EP-2bP" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="mdF-EP-2bP" customClass="ResultsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pU3-zv-uyk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultados:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuH-r6-dnC">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CqV-Fb-ids">
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="A7S-y7-mMr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A7S-y7-mMr" id="k93-2K-ysw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svm-3x-Cvm">
+                                                    <rect key="frame" x="16" y="8" width="343" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="svm-3x-Cvm" secondAttribute="bottom" constant="8" id="7pC-b0-95L"/>
+                                                <constraint firstItem="svm-3x-Cvm" firstAttribute="top" secondItem="k93-2K-ysw" secondAttribute="top" constant="8" id="bzd-cW-jnm"/>
+                                                <constraint firstAttribute="trailing" secondItem="svm-3x-Cvm" secondAttribute="trailing" constant="16" id="nZ9-yP-WhT"/>
+                                                <constraint firstItem="svm-3x-Cvm" firstAttribute="leading" secondItem="k93-2K-ysw" secondAttribute="leading" constant="16" id="qAJ-E9-a4r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588239999997" green="0.60784313729999995" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EuH-r6-dnC" firstAttribute="top" secondItem="alm-ni-clx" secondAttribute="top" constant="16" id="5AQ-nd-nRZ"/>
+                            <constraint firstItem="alm-ni-clx" firstAttribute="bottom" secondItem="CqV-Fb-ids" secondAttribute="bottom" id="GNj-EN-Bg3"/>
+                            <constraint firstItem="CqV-Fb-ids" firstAttribute="leading" secondItem="alm-ni-clx" secondAttribute="leading" id="MSO-J1-BnH"/>
+                            <constraint firstItem="alm-ni-clx" firstAttribute="trailing" secondItem="CqV-Fb-ids" secondAttribute="trailing" id="Mzs-EO-wGk"/>
+                            <constraint firstItem="alm-ni-clx" firstAttribute="trailing" secondItem="EuH-r6-dnC" secondAttribute="trailing" constant="16" id="Tmy-CQ-Uox"/>
+                            <constraint firstItem="EuH-r6-dnC" firstAttribute="leading" secondItem="alm-ni-clx" secondAttribute="leading" constant="16" id="WiF-38-yRW"/>
+                            <constraint firstItem="CqV-Fb-ids" firstAttribute="top" secondItem="EuH-r6-dnC" secondAttribute="bottom" constant="16" id="psb-2b-7eU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="alm-ni-clx"/>
                     </view>
                 </viewController>
