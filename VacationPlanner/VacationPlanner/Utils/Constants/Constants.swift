@@ -21,16 +21,20 @@ struct Constants {
     
     struct CitiesMethods {
         static let getAllCities = "/cities/"
-        static let getCityDailyClimate = "/%@/year/%@"
+        
     }
     
     struct WeatherMethods {
         static let getAllWeatherTypes = "/weather/"
     }
     
+    struct DailyClimateMethods {
+        static let getCityDailyClimate = "/%@/year/%@"
+    }
+    
     struct APIUrls {
         static let getAllCitiesUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities
-        static let getCityClimateUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities + CitiesMethods.getCityDailyClimate
+        static let getDailyClimatesUrl = Constants.APIPreffix.urlPreffix + CitiesMethods.getAllCities + DailyClimateMethods.getCityDailyClimate
         static let getAllWeatherTypesUrl = Constants.APIPreffix.urlPreffix + WeatherMethods.getAllWeatherTypes
     }
 }

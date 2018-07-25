@@ -30,6 +30,7 @@
 		9FD37E982108BAF900BCC822 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E972108BAF900BCC822 /* UITextField.swift */; };
 		9FD37E9B2108BB3F00BCC822 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */; };
 		9FD37E9E2108BFD600BCC822 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9D2108BFD600BCC822 /* WeatherTableViewCell.swift */; };
+		9FD37EA02108CFD900BCC822 /* DailyClimateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD37E9F2108CFD900BCC822 /* DailyClimateResponse.swift */; };
 		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
 		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		9FD37E972108BAF900BCC822 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		9FD37E9A2108BB3F00BCC822 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		9FD37E9D2108BFD600BCC822 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		9FD37E9F2108CFD900BCC822 /* DailyClimateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClimateResponse.swift; sourceTree = "<group>"; };
 		9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 		9F3F37A72106B25E0009D979 /* DailyClimate */ = {
 			isa = PBXGroup;
 			children = (
+				9FD37E9F2108CFD900BCC822 /* DailyClimateResponse.swift */,
 				9F3F37A82106B25E0009D979 /* DailyClimate.swift */,
 				9F3F37A92106B25E0009D979 /* Temperature.swift */,
 			);
@@ -570,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD37EA02108CFD900BCC822 /* DailyClimateResponse.swift in Sources */,
 				9FD37E8F2108A8DD00BCC822 /* UIView.swift in Sources */,
 				9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */,
 				9FD37E982108BAF900BCC822 /* UITextField.swift in Sources */,
