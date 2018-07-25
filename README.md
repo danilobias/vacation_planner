@@ -49,5 +49,10 @@ Execute o stubby4j através do comando:
 - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD)
 
 ### Contato
+
+ - Testes automatizados;
+ - Melhor tratamento de erros;
+
+### Contato
 - [LinkedIn](https://www.linkedin.com/in/danilobias/)
 - [E-mail](danilobias@hotmail.com)
