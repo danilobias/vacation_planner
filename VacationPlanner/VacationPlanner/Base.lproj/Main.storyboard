@@ -236,7 +236,7 @@
                                 <rect key="frame" x="0.0" y="109" width="375" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KpE-4J-hrQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherTableViewCell" id="KpE-4J-hrQ" customClass="WeatherTableViewCell" customModule="VacationPlanner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KpE-4J-hrQ" id="SbC-VW-lOX">
@@ -259,6 +259,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xz2-7o-Xz4" id="PK9-Th-v7z"/>
+                                    <outlet property="delegate" destination="xz2-7o-Xz4" id="g0V-Ov-fZc"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP4-gg-wn9">
                                 <rect key="frame" x="16" y="601" width="343" height="50"/>
@@ -284,6 +288,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7zt-Yr-qeg"/>
                     </view>
+                    <connections>
+                        <outlet property="selectButton" destination="ZP4-gg-wn9" id="UdB-VK-Lw5"/>
+                        <outlet property="tableView" destination="Fzi-za-J3l" id="9tp-fI-O4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIX-fK-bln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
