@@ -9,6 +9,16 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var box1View: UIView!
+    @IBOutlet weak var box2View: UIView!
+    
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var daysTextField: UITextField!
+    
+    @IBOutlet weak var climateLabel: UILabel!
 
     // MARK: - Lets and Vars
     var citiesViewModel: CitiesViewModel! {
