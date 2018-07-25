@@ -26,7 +26,6 @@
 		9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDB2107FF630037EFF7 /* BaseViewController.swift */; };
 		9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */; };
 		9FF4C2EB2106AD36007F8038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */; };
-		9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EC2106AD36007F8038 /* ViewController.swift */; };
 		9FF4C2F02106AD36007F8038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2EE2106AD36007F8038 /* Main.storyboard */; };
 		9FF4C2F32106AD36007F8038 /* VacationPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4C2F12106AD36007F8038 /* VacationPlanner.xcdatamodeld */; };
 		9FF4C2F52106AD38007F8038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF4C2F42106AD38007F8038 /* Assets.xcassets */; };
@@ -67,7 +66,6 @@
 		9FEDDCDE2107FF950037EFF7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9FF4C2E72106AD36007F8038 /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FF4C2EC2106AD36007F8038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FF4C2EF2106AD36007F8038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FF4C2F22106AD36007F8038 /* VacationPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VacationPlanner.xcdatamodel; sourceTree = "<group>"; };
 		9FF4C2F42106AD38007F8038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				9FEDDCD92107FF250037EFF7 /* View */,
 				9F677CA42107833F002DA21F /* ViewModel */,
 				9FF4C2EA2106AD36007F8038 /* AppDelegate.swift */,
-				9FF4C2EC2106AD36007F8038 /* ViewController.swift */,
 				9FF4C2EE2106AD36007F8038 /* Main.storyboard */,
 				9FF4C2F42106AD38007F8038 /* Assets.xcassets */,
 				9FF4C2F62106AD38007F8038 /* LaunchScreen.storyboard */,
@@ -489,7 +486,6 @@
 				9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */,
 				9F3F37B22106B3890009D979 /* BaseRequest.swift in Sources */,
 				9FEDDCDF2107FF950037EFF7 /* HomeViewController.swift in Sources */,
-				9FF4C2ED2106AD36007F8038 /* ViewController.swift in Sources */,
 				9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */,
 				9F677CA821078384002DA21F /* Protocols.swift in Sources */,
 				9FEDDCDC2107FF630037EFF7 /* BaseViewController.swift in Sources */,

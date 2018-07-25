@@ -7,6 +7,8 @@ target 'VacationPlanner' do
     # Pods for VacationPlanner
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'TextFieldEffects'
+    pod 'IQKeyboardManager'
     
     target 'VacationPlannerTests' do
         inherit! :search_paths
