@@ -16,21 +16,13 @@ protocol DailyClimateViewModelProtocol: ListProtocol {
 class DailyClimateViewModel: DailyClimateViewModelProtocol {
     
     // MARK: - Vars
-    var response: DailyClimateResponse?
-//    {
-//        didSet{
-//            self.responseDidChange?(self)
-//        }
-//    }
-    
+    var response: DailyClimateResponse?    
     var responseDidChange: ((DailyClimateViewModelProtocol) -> Void)?
     
     var cityID: String = ""
     var fullDate: String = ""
     var days: String = ""
-    var selectedWeathers: [Weather]!    
-    
-//    var climates: [DailyClimate]!
+    var selectedWeathers: [Weather]!        
     var climatesGrouped: [String: [DailyClimate]]!
     
     // MARK: - Methods
@@ -46,7 +38,7 @@ class DailyClimateViewModel: DailyClimateViewModelProtocol {
     }
     
     func filterByClimate () {
-//        self.climates = []
+
         self.climatesGrouped = [:]
         
         if let results: [DailyClimate] = self.response?.climates {
@@ -55,7 +47,6 @@ class DailyClimateViewModel: DailyClimateViewModelProtocol {
                 for weather in selectedWeathers {
                     let filteredResults: [DailyClimate] = results.filter({$0.weather! == weather.name!})
                     let filteredByDate:  [DailyClimate] = filteredResults.filter({$0.date! >= dateToCompare && ($0.date?.days(from: dateToCompare))! > daysInt})
-//                    self.climates.append(contentsOf: filteredByDate)
                     self.climatesGrouped[weather.name!] = filteredByDate
                 }
             }

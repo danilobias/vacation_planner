@@ -17,6 +17,8 @@
 		9F3F37B62106B41A0009D979 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B52106B41A0009D979 /* Constants.swift */; };
 		9F3F37B92106B9560009D979 /* CitiesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37B82106B9560009D979 /* CitiesRequest.swift */; };
 		9F3F37BB2106B98D0009D979 /* CitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F37BA2106B98D0009D979 /* CitiesResponse.swift */; };
+		9F5EB2D8210A3DAE0015A289 /* DailyClimateViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EB2D7210A3DAE0015A289 /* DailyClimateViewModelTest.swift */; };
+		9F5EB2DA210A522C0015A289 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EB2D9210A522C0015A289 /* HomeViewControllerTest.swift */; };
 		9F677CA821078384002DA21F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CA721078384002DA21F /* Protocols.swift */; };
 		9F677CAA210783B4002DA21F /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CA9210783B4002DA21F /* CitiesViewModel.swift */; };
 		9F677CAE21079B3F002DA21F /* DailyClimateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F677CAD21079B3F002DA21F /* DailyClimateViewModel.swift */; };
@@ -66,6 +68,8 @@
 		9F3F37B52106B41A0009D979 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F3F37B82106B9560009D979 /* CitiesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesRequest.swift; sourceTree = "<group>"; };
 		9F3F37BA2106B98D0009D979 /* CitiesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesResponse.swift; sourceTree = "<group>"; };
+		9F5EB2D7210A3DAE0015A289 /* DailyClimateViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClimateViewModelTest.swift; sourceTree = "<group>"; };
+		9F5EB2D9210A522C0015A289 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		9F677CA721078384002DA21F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9F677CA9210783B4002DA21F /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		9F677CAD21079B3F002DA21F /* DailyClimateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClimateViewModel.swift; sourceTree = "<group>"; };
@@ -414,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				9FF4C3022106AD38007F8038 /* VacationPlannerTests.swift */,
+				9F5EB2D7210A3DAE0015A289 /* DailyClimateViewModelTest.swift */,
+				9F5EB2D9210A522C0015A289 /* HomeViewControllerTest.swift */,
 				9FF4C3042106AD38007F8038 /* Info.plist */,
 			);
 			path = VacationPlannerTests;
@@ -653,6 +659,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5EB2D8210A3DAE0015A289 /* DailyClimateViewModelTest.swift in Sources */,
+				9F5EB2DA210A522C0015A289 /* HomeViewControllerTest.swift in Sources */,
 				9FF4C3032106AD38007F8038 /* VacationPlannerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,7 +817,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -825,7 +836,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -842,7 +856,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlannerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -860,7 +878,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UADKHJJ29F;
 				INFOPLIST_FILE = VacationPlannerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.nextel.VacationPlannerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
