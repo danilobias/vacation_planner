@@ -229,7 +229,7 @@
         <!--Clima-->
         <scene sceneID="k62-TR-fwE">
             <objects>
-                <viewController title="Clima" hidesBottomBarWhenPushed="YES" id="xz2-7o-Xz4" customClass="ClimateOptionsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClimateOptionsViewController" title="Clima" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xz2-7o-Xz4" customClass="ClimateOptionsViewController" customModule="VacationPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjD-ii-Hrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
