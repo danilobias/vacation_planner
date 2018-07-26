@@ -13,8 +13,9 @@ target 'VacationPlanner' do
     target 'VacationPlannerTests' do
         inherit! :search_paths
         # Pods for testing
+        pod 'Quick'
+        pod 'Nimble'
     end
-
     
 end
 
